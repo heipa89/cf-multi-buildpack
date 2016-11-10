@@ -63,7 +63,7 @@ for BUILDPACK in $(cat $1/.cfbuildpacks); do
       source $dir/export
     fi
 
-    if [ ! -e $1/last_pack_release.out && -x $dir/bin/release ]; then
+    if [ ! -e $1/last_pack_release.out ] && [ -x $dir/bin/release ]; then
       $dir/bin/release $1 > $1/last_pack_release.out
     fi
   fi
