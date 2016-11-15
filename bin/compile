@@ -70,6 +70,6 @@ for BUILDPACK in $(cat $1/.cfbuildpacks); do
 done
 
 if [ -e $1/last_pack_release.out ]; then
-  echo "Using release configuration from last framework ($framework)."
+  echo "Using release configuration from first framework."
   cat $1/last_pack_release.out
 fi
